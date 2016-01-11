@@ -1,7 +1,7 @@
 menu:
-    博客: /
+    BLOG: /
+    github: https://github.com/enjoychan
     about me: http://enjoychan.github.io/resume/
-    github: https://github.com/pinggod
 
 favicon: /favicon.png
 logo: /favicon.png

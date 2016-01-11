@@ -14,7 +14,20 @@
             list-style: initial;
         }
     }
-    .read-more {     
+    .read-more {
         color: #42b983;
+    }
+}
+
+.archive.post-list {
+    list-style: disc;
+
+    li {
+
+      .date {
+        color: #999;
+        padding-right: 10px;
+      }
+
     }
 }

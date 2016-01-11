@@ -1,6 +1,6 @@
-import gulp from 'gulp';
-import sass from 'gulp-sass';
-import autoprefixer from 'gulp-autoprefixer';
+var gulp = require('gulp');
+var sass  = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 
 const path = {
     sass: './source/scss',
@@ -21,6 +21,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('default', ['sass'], function() {
-    gulp.watch(`.${path.sass}/_partial/*.scss`, ['sass']);
-    gulp.watch(`.${path.sass}/*.scss`, ['sass']);
+    console.log('watch...')
+    gulp.watch('./source/scss/_partial/*.scss', ['sass']);
+    gulp.watch('./source/scss/*.scss', ['sass']);
 });

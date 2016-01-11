@@ -1,7 +1,10 @@
 mixin postInfo(item)
     .post-meta
-        .post-time
-            != full_date(item.date, 'll')
+        != full_date(item.date, 'll') + ' | '
+        if item.categories.length > 0
+            span.categories= '分类于 ' 
+                for category in item.categories.toArray()
+                    a(href=url_for(category.path))= " #" + category.name
 
 mixin posts()
     ul.home.post-list
@@ -25,3 +28,12 @@ mixin post(item)
             +postInfo(item)
             .post-content
                 != item.content
+
+mixin postsList()
+  ul.archive.post-list
+      - page.posts.each(function(item, index) {
+          li
+              a.archive-list-link(href=url_for(item.path), title=item.title)
+                  span.date= item.date.format('YYYY/MM/DD')
+                  != item.title
+      - })
