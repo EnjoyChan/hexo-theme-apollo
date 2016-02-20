@@ -1,10 +1,10 @@
 menu:
-    BLOG: /
+    BLOG: /blog/
     github: https://github.com/enjoychan
     about me: http://enjoychan.github.io/resume/
 
-favicon: /favicon.png
-logo: /favicon.png
+favicon: /blog/favicon.jpg
+logo: /blog/page_bg.jpg
 
 # comment
 # e.g disqus: seansun
